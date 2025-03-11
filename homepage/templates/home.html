@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library management system</title>
+    <style>
+        body 
+        {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header 
+        {
+            background: #5C3D8A;
+            color: white;
+            padding: 20px 0;
+        }
+
+        header .container 
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items:baseline;
+            max-width: 1200px;
+            margin: auto;
+            /*padding: 0 20px;*/
+        }
+
+        header nav ul 
+        {
+            list-style: none;
+            display:flex;
+        }
+
+        header nav ul li 
+        {
+            margin: 0 15px;
+        }
+
+        header nav a 
+        {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        /* Main content layout - Full height and center align */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .text-content {
+            flex: 1;
+            padding-right: 20px;
+            text-align: left;
+        }
+
+        .text-content h2 {
+            font-size: 2.5em;
+            color: #7e2d2d;
+        }
+
+        .text-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .image-content {
+            flex: 1;
+            text-align: right;
+        }
+
+        .image-content img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center; /* Center the buttons */
+            margin: 10px 0 20px 0; /* Add some space above and below */
+        }
+
+        .button {
+            background-color: #7e2d2d;; /* Button background color */
+            color: white; /* Text color */
+            padding: 15px 30px; /* Button padding */
+            margin: 0 10px; /* Space between buttons */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 1.2em; /* Font size */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        .button:hover {
+            background-color: #FFD700; /* Change color on hover */
+            color: #5C3D8A; /* Text color change on hover */
+        }
+
+
+        footer {
+            background: #5C3D8A;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Library management System</h1>
+            <nav>
+                <ul>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li><a class="button" href="">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <div class="content">
+        <div class="text-content">
+            <h2>Take you Book</h2>
+            <p>
+                A Library Management System (LMS) is a software application designed to efficiently manage library resources, including books, students, and staff. It automates key functions such as book cataloging, borrowing, returning, and fine calculation. LMS helps libraries to provide better services to users by making the library resources more accessible and organized.
+            </p>
+
+            <div class="button-container">
+                <a class="button" href="{% url 'login' %}">Login</a>
+                <a class="button" href="{% url 'signup' %}">Sign up</a>
+
+            </div>
+            
+        </div>
+
+        <div class="image-content">
+            <img src="https://thumbs.dreamstime.com/b/people-blood-donation-concept-volunteers-donated-blood-medical-charity-concept-support-health-unknown-person-people-blood-319960995.jpg" alt="Blood group identification image">
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Library management system Project. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
